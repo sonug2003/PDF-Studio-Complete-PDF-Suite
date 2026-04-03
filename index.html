@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Complete PDF Studio</title>
+  <meta name="description" content="Privacy Policy for Complete PDF Studio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-0: #07090d;
+      --bg-1: #0c121b;
+      --bg-2: #121a26;
+      --card: rgba(20, 27, 39, 0.85);
+      --card-solid: #121b29;
+      --text: #e7eef8;
+      --muted: #9fb0c7;
+      --line: rgba(124, 156, 196, 0.25);
+      --brand: #39d0ff;
+      --brand-2: #ffc857;
+      --ok: #45d483;
+      --warn: #ff9f43;
+      --danger: #ff6b6b;
+      --shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --toc-w: 300px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(1000px 450px at 8% -8%, rgba(57, 208, 255, 0.18), transparent 60%),
+        radial-gradient(900px 450px at 98% 0%, rgba(255, 200, 87, 0.14), transparent 58%),
+        linear-gradient(165deg, var(--bg-0) 0%, var(--bg-1) 38%, var(--bg-2) 100%);
+      font-family: "Manrope", "Segoe UI", sans-serif;
+      line-height: 1.65;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(transparent 97%, rgba(255, 255, 255, 0.03) 98%);
+      background-size: 100% 28px;
+      opacity: 0.25;
+      z-index: -1;
+    }
+
+    .progress-wrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      z-index: 999;
+    }
+
+    .progress {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      box-shadow: 0 0 18px rgba(57, 208, 255, 0.55);
+      transition: width 0.08s linear;
+    }
+
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px 24px 100px;
+    }
+
+    .hero {
+      background: linear-gradient(140deg, rgba(18, 27, 40, 0.95), rgba(15, 22, 33, 0.9));
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 4px);
+      box-shadow: var(--shadow);
+      padding: 34px clamp(20px, 3vw, 42px);
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -110px;
+      top: -110px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(57, 208, 255, 0.22), transparent 64%);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: "Sora", "Manrope", sans-serif;
+      font-size: clamp(1.8rem, 2.7vw, 2.9rem);
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      max-width: 82ch;
+    }
+
+    .meta-grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .meta-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+
+    .meta-card b {
+      display: block;
+      color: var(--brand-2);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .layout {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: var(--toc-w) minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 22px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      backdrop-filter: blur(5px);
+      animation: fadeUp 0.75s ease both;
+    }
+
+    .toc h2 {
+      margin: 0 0 10px;
+      font-family: "Sora", "Manrope", sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--brand-2);
+    }
+
+    .toc ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--muted);
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      padding: 8px 10px;
+      transition: 0.22s ease;
+      font-size: 0.93rem;
+    }
+
+    .toc a:hover,
+    .toc a.active {
+      color: #fff;
+      border-color: rgba(57, 208, 255, 0.35);
+      background: rgba(57, 208, 255, 0.1);
+      transform: translateX(2px);
+    }
+
+    .content {
+      display: grid;
+      gap: 16px;
+      counter-reset: sectionCounter;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      animation: fadeUp 0.85s ease both;
+    }
+
+    .summary-card {
+      background: var(--card-solid);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      min-height: 118px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .summary-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(57, 208, 255, 0.4);
+    }
+
+    .summary-card h3 {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      color: var(--brand);
+      font-family: "Sora", "Manrope", sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      backdrop-filter: blur(4px);
+      animation: fadeUp 0.95s ease both;
+    }
+
+    section h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-family: "Sora", "Manrope", sans-serif;
+      line-height: 1.3;
+      position: relative;
+      padding-left: 44px;
+    }
+
+    section h2::before {
+      counter-increment: sectionCounter;
+      content: counter(sectionCounter);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-size: 0.83rem;
+      color: #08121a;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(57, 208, 255, 0.35);
+    }
+
+    p,
+    li {
+      color: #d8e4f5;
+    }
+
+    ul {
+      margin: 0.45rem 0 0.75rem 1.1rem;
+      padding: 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .callout {
+      border-left: 4px solid var(--brand);
+      background: rgba(57, 208, 255, 0.08);
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin: 12px 0;
+    }
+
+    .callout.warn {
+      border-left-color: var(--warn);
+      background: rgba(255, 159, 67, 0.12);
+    }
+
+    .callout.ok {
+      border-left-color: var(--ok);
+      background: rgba(69, 212, 131, 0.11);
+    }
+
+    .table-wrap {
+      margin-top: 10px;
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+      background: rgba(10, 16, 25, 0.88);
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(124, 156, 196, 0.18);
+      vertical-align: top;
+      font-size: 0.92rem;
+    }
+
+    th {
+      background: rgba(57, 208, 255, 0.12);
+      color: #f1f8ff;
+      font-family: "Sora", "Manrope", sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .chip {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 2px 8px;
+      font-size: 0.78rem;
+      color: #d7e7ff;
+      margin: 2px 4px 2px 0;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .back-top {
+      position: fixed;
+      right: 16px;
+      bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.23);
+      background: rgba(14, 21, 31, 0.92);
+      color: #f7fbff;
+      border-radius: 999px;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: 0.25s ease;
+      z-index: 20;
+    }
+
+    .back-top.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .back-top:hover {
+      background: rgba(57, 208, 255, 0.16);
+      border-color: rgba(57, 208, 255, 0.5);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1160px) {
+      .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 980px) {
+      :root {
+        --toc-w: 1fr;
+      }
+
+      .meta-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+
+      .toc ul {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 4px;
+      }
+
+      .toc li {
+        flex: 0 0 auto;
+      }
+
+      .toc a {
+        white-space: nowrap;
+      }
+
+      section h2 {
+        padding-left: 40px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 20px 14px 90px;
+      }
+
+      .hero {
+        padding: 24px 16px;
+      }
+
+      .meta-grid,
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 16px;
+      }
+
+      .back-top {
+        right: 12px;
+        bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-wrap" aria-hidden="true">
+    <div id="scrollProgress" class="progress"></div>
+  </div>
+
+  <div class="page">
+    <header class="hero" id="top">
+      <h1>Privacy Policy for Complete PDF Studio</h1>
+      <p>
+        This Privacy Policy is based on a direct source-code audit of the Android app package
+        com.completepdfstudio. It is intended for public publishing and Google Play policy disclosures.
+      </p>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <b>App Name</b>
+          Complete PDF Studio
+        </div>
+        <div class="meta-card">
+          <b>Developer</b>
+          Himanshu Ranjan and Alok Ranjan
+        </div>
+        <div class="meta-card">
+          <b>Effective Date</b>
+          April 3, 2026
+        </div>
+        <div class="meta-card">
+          <b>Last Updated</b>
+          April 3, 2026
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="toc" aria-label="Table of contents">
+        <h2>Contents</h2>
+        <ul id="tocList">
+          <li><a href="#scope">1. Scope</a></li>
+          <li><a href="#collected">2. Information Collected</a></li>
+          <li><a href="#not-collected">3. Information Not Collected</a></li>
+          <li><a href="#use">4. How Information Is Used</a></li>
+          <li><a href="#sharing">5. Sharing and Selling</a></li>
+          <li><a href="#sdk">6. Third-Party SDKs</a></li>
+          <li><a href="#permissions">7. Permissions</a></li>
+          <li><a href="#storage">8. Storage and Retention</a></li>
+          <li><a href="#security">9. Security</a></li>
+          <li><a href="#transfers">10. International Transfers</a></li>
+          <li><a href="#children">11. Children</a></li>
+          <li><a href="#rights">12. User Rights</a></li>
+          <li><a href="#deletion">13. Deletion Requests</a></li>
+          <li><a href="#play">14. Google Play Disclosures</a></li>
+          <li><a href="#changes">15. Policy Changes</a></li>
+          <li><a href="#contact">16. Contact</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <section aria-label="Summary cards">
+          <div class="summary-grid">
+            <article class="summary-card">
+              <h3>No app account system</h3>
+              <p>No sign-up, login, or user account creation flow is present in the audited source code.</p>
+            </article>
+            <article class="summary-card">
+              <h3>No analytics or ads SDKs</h3>
+              <p>No Firebase Analytics, ad network SDK, attribution SDK, or crash-reporting SDK usage was found.</p>
+            </article>
+            <article class="summary-card">
+              <h3>Local-first processing</h3>
+              <p>The app processes user-selected PDF/image files on-device and stores outputs on device storage.</p>
+            </article>
+            <article class="summary-card">
+              <h3>No direct backend API calls</h3>
+              <p>No HTTP client integration or direct network request code path was found in the app source.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="scope">
+          <h2>Scope</h2>
+          <p>
+            This Privacy Policy applies to the Android application Complete PDF Studio (package name: com.completepdfstudio),
+            including its PDF processing, conversion, annotation, and export features.
+          </p>
+          <p>
+            This policy covers how the app code accesses, processes, stores, and shares user data through app features.
+          </p>
+          <div class="callout warn">
+            If the legal entity name, contact email, or support details change, update this policy and your Google Play disclosures before release.
+          </div>
+        </section>
+
+        <section id="collected">
+          <h2>Information Collected or Processed</h2>
+          <p>
+            Based on the audited source code, the app may access and process the following categories of data when you use app features:
+          </p>
+          <ul>
+            <li>Files you select from your device (such as PDF files and selected images).</li>
+            <li>File contents of selected documents and images for local processing (for example, OCR, text extraction, conversion, merge/split, annotation).</li>
+            <li>User-entered document content and metadata (for example, added text, watermark text, PDF metadata fields, password fields).</li>
+            <li>Generated output files (for example, edited PDFs, extracted text files, exported images, generated HTML/text outputs).</li>
+            <li>Temporary cache copies of selected files used for processing workflows.</li>
+          </ul>
+
+          <div class="table-wrap" role="region" aria-label="Data categories table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Data Category</th>
+                  <th>How It Enters the App</th>
+                  <th>Primary Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>User-selected PDFs/images</td>
+                  <td>System document pickers (OpenDocument/OpenMultipleDocuments)</td>
+                  <td>Local PDF tools and conversion workflows</td>
+                </tr>
+                <tr>
+                  <td>Document text/metadata</td>
+                  <td>Read from selected files or entered by the user</td>
+                  <td>Edit, view, OCR, extraction, and metadata operations</td>
+                </tr>
+                <tr>
+                  <td>Output files</td>
+                  <td>Created by app processing features</td>
+                  <td>Save, open, or user-initiated share/export</td>
+                </tr>
+                <tr>
+                  <td>Local diagnostic warnings</td>
+                  <td>Internal logging for invalid page range parsing</td>
+                  <td>Debug/validation behavior in local app execution</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="not-collected">
+          <h2>Information Not Collected (Code-Audit Findings)</h2>
+          <p>
+            The audited code does not include logic for collecting or transmitting the following categories as part of an app backend service:
+          </p>
+          <ul>
+            <li>No user account registration, login, or profile backend.</li>
+            <li>No payment, subscription, or in-app billing integration.</li>
+            <li>No analytics SDK integration detected in source usage.</li>
+            <li>No ad SDK integration detected in source usage.</li>
+            <li>No crash-reporting SDK integration detected in source usage.</li>
+            <li>No push notification service integration detected.</li>
+            <li>No direct collection of device identifiers such as IMEI/Android ID in app code.</li>
+            <li>No contacts, SMS, call log, or location access in the audited app code.</li>
+          </ul>
+          <div class="callout ok">
+            The app source contains no direct HTTP client integration or explicit app-to-backend API request implementation.
+          </div>
+        </section>
+
+        <section id="use">
+          <h2>How Information Is Used</h2>
+          <p>Data is used only to perform user-invoked app functionality, including:</p>
+          <ul>
+            <li>Reading selected files into app cache for processing.</li>
+            <li>Applying requested PDF operations such as edit, convert, merge, split, OCR, redact, annotate, and export.</li>
+            <li>Rendering previews and extracting text/links for in-app viewing functions.</li>
+            <li>Saving outputs to app storage and optionally to device Downloads when the user chooses to save/export.</li>
+            <li>User-initiated share actions through Android share intents.</li>
+          </ul>
+        </section>
+
+        <section id="sharing">
+          <h2>Data Sharing and Data Selling</h2>
+          <p>
+            The audited app code does not implement automatic data selling or automatic sharing of your files/content to a developer backend.
+          </p>
+          <p>
+            Data may leave the app only in user-initiated cases, such as:
+          </p>
+          <ul>
+            <li>You choose Share and send a file through another app via Android share sheet.</li>
+            <li>You choose to open a link embedded in a PDF, which launches another app (for example, a browser).</li>
+          </ul>
+          <div class="callout">
+            User-initiated file transfer through Android share actions is treated as user-directed sharing, not data sale.
+          </div>
+        </section>
+
+        <section id="sdk">
+          <h2>Third-Party Services and SDKs</h2>
+          <p>The audited code/dependencies include the following notable libraries:</p>
+          <div class="table-wrap" role="region" aria-label="SDK table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Library / SDK</th>
+                  <th>Observed Purpose in App</th>
+                  <th>Audit Note</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>com.tom-roush:pdfbox-android</td>
+                  <td>Core PDF processing and document operations</td>
+                  <td>Used extensively for local document manipulation.</td>
+                </tr>
+                <tr>
+                  <td>com.google.mlkit:text-recognition</td>
+                  <td>OCR text recognition in OcrActivity</td>
+                  <td>Initialized in app code via TextRecognition API.</td>
+                </tr>
+                <tr>
+                  <td>AndroidX / Material Components</td>
+                  <td>UI and app framework support</td>
+                  <td>Framework/UI usage.</td>
+                </tr>
+                <tr>
+                  <td>com.github.bumptech.glide:glide</td>
+                  <td>Declared dependency</td>
+                  <td>No explicit runtime usage was identified in audited source files.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="permissions">
+          <h2>Permissions and Why They Are Declared</h2>
+          <p>The Android manifest declares the following permissions:</p>
+          <div class="table-wrap" role="region" aria-label="Permissions table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Permission</th>
+                  <th>Declared In Manifest</th>
+                  <th>Functional Context in App</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>READ_EXTERNAL_STORAGE (maxSdkVersion 32)</td>
+                  <td>Yes</td>
+                  <td>Related to reading user-selected files and legacy external storage access scenarios.</td>
+                </tr>
+                <tr>
+                  <td>WRITE_EXTERNAL_STORAGE (maxSdkVersion 29)</td>
+                  <td>Yes</td>
+                  <td>Related to writing outputs to public Downloads on legacy Android versions.</td>
+                </tr>
+                <tr>
+                  <td>READ_MEDIA_IMAGES</td>
+                  <td>Yes</td>
+                  <td>Related to selecting images for Images-to-PDF features.</td>
+                </tr>
+                <tr>
+                  <td>MANAGE_EXTERNAL_STORAGE</td>
+                  <td>Yes</td>
+                  <td>Declared special storage permission; app code primarily uses document pickers and MediaStore-based save flows.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout warn">
+            If you publish on Google Play with broad storage/media permissions, ensure your Play Console permission declarations and app behavior remain policy-compliant for restricted permission review.
+          </div>
+        </section>
+
+        <section id="storage">
+          <h2>Storage Locations and Data Retention</h2>
+          <p>The app stores data locally on your device in these locations:</p>
+          <ul>
+            <li>App cache directory for temporary processing copies (for example, selected file cache and merge temp files).</li>
+            <li>App external files directory under a PDFStudio subfolder for generated outputs.</li>
+            <li>Optional user-visible Downloads/PDFStudio export location when you choose Save to Device.</li>
+          </ul>
+
+          <div class="table-wrap" role="region" aria-label="Retention table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Data Type</th>
+                  <th>Where Stored</th>
+                  <th>Retention Behavior</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Temporary merge files</td>
+                  <td>App cache</td>
+                  <td>Explicitly deleted after merge operation completes.</td>
+                </tr>
+                <tr>
+                  <td>Other cached file copies</td>
+                  <td>App cache</td>
+                  <td>Persist until app/system cache cleanup or app uninstall.</td>
+                </tr>
+                <tr>
+                  <td>Generated output files</td>
+                  <td>App external files/PDFStudio</td>
+                  <td>Persist until user deletion or app uninstall.</td>
+                </tr>
+                <tr>
+                  <td>User-exported files</td>
+                  <td>Downloads/PDFStudio</td>
+                  <td>Persist until user manually deletes them.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            The manifest sets android:allowBackup="true". The repository does not define a custom backup policy file,
+            so any platform-managed backup behavior depends on Android system behavior and user/device settings.
+          </p>
+        </section>
+
+        <section id="security">
+          <h2>Data Security</h2>
+          <ul>
+            <li>Processing is primarily local to the device according to audited code paths.</li>
+            <li>File sharing uses Android FileProvider and requires a user action.</li>
+            <li>No direct app backend transmission code was identified in the source audit.</li>
+            <li>Password-protection features can be applied by users to PDF outputs as an optional document-level protection control.</li>
+          </ul>
+          <div class="callout">
+            No software can guarantee absolute security. Device security (lock screen, OS updates, malware hygiene) also affects protection outcomes.
+          </div>
+        </section>
+
+        <section id="transfers">
+          <h2>International Data Transfers</h2>
+          <p>
+            The audited app code does not implement direct developer backend transfers.
+            Therefore, there are no app-controlled international transfers to a developer server shown in the audited source.
+          </p>
+          <p>
+            If you intentionally share files to third-party apps or open external links from documents,
+            those third-party services may process data under their own policies and jurisdictions.
+          </p>
+        </section>
+
+        <section id="children">
+          <h2>Children's Privacy</h2>
+          <p>
+            The audited source does not implement a child-specific account model, child profiling logic,
+            or dedicated child-directed data collection features.
+          </p>
+          <p>
+            If this app is later positioned as child-directed, additional compliance steps may be required
+            under applicable child privacy laws and Google Play Families requirements.
+          </p>
+        </section>
+
+        <section id="rights">
+          <h2>User Rights and Controls</h2>
+          <p>
+            Because this app does not include an in-app account system or developer-hosted user profile backend in audited code,
+            your primary controls are local device controls:
+          </p>
+          <ul>
+            <li>Delete files you imported or exported on your device.</li>
+            <li>Clear app data/cache using Android app settings.</li>
+            <li>Uninstall the app to remove app-private data from the device.</li>
+            <li>Control sharing by choosing whether to send files via external apps.</li>
+          </ul>
+        </section>
+
+        <section id="deletion">
+          <h2>Account Deletion and Data Deletion</h2>
+          <p>
+            Account deletion is not applicable to the audited app code because no in-app account creation or sign-in system was found.
+          </p>
+          <p>
+            Data deletion is device-based in this app architecture:
+          </p>
+          <ul>
+            <li>Delete exported files from Downloads/PDFStudio or wherever you saved them.</li>
+            <li>Delete files from app storage by clearing app data or uninstalling the app.</li>
+          </ul>
+          <div class="callout ok">
+            Google Play account-deletion web-link requirements apply when an app supports account creation. No such flow was found in this audited codebase.
+          </div>
+        </section>
+
+        <section id="play">
+          <h2>Google Play User Data and Data Safety Disclosures</h2>
+          <p>
+            This policy is designed to align with Google Play User Data and privacy policy requirements by disclosing:
+          </p>
+          <ul>
+            <li>What the app processes from user-selected files and user input.</li>
+            <li>What the app does not collect or share through a developer backend.</li>
+            <li>How data is stored, retained, and deleted in local app/device storage workflows.</li>
+            <li>Third-party SDKs present in the app and their observed in-app roles.</li>
+            <li>Manifest permissions and user-facing data handling context.</li>
+          </ul>
+          <div class="callout warn">
+            Keep this policy and your Play Console Data safety form synchronized. If app behavior or SDK usage changes, update both before release.
+          </div>
+        </section>
+
+        <section id="changes">
+          <h2>Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy to reflect app updates, SDK changes, legal requirements,
+            or data handling changes. The Last Updated date at the top of this page will be revised when changes are published.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>Contact Information</h2>
+          <p>For privacy questions or requests, contact:</p>
+          <ul>
+            <li>Developer/Company: Himanshu Ranjan and Alok Ranjan</li>
+            <li>Email: pyrbit0supp@gmail.com</li>
+            <li>Postal Address: India</li>
+            <li>Support URL (optional): https://pyrbit.com</li>
+          </ul>
+          <p class="footer-note">
+            Public Privacy Policy URL suggestion: https://pyrbit.com/privacy-policy
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <button id="backTop" class="back-top" aria-label="Back to top" title="Back to top">^</button>
+
+  <script>
+    (function () {
+      var progress = document.getElementById("scrollProgress");
+      var backTop = document.getElementById("backTop");
+      var tocLinks = Array.prototype.slice.call(document.querySelectorAll("#tocList a"));
+      var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
+
+      function updateProgress() {
+        var top = window.scrollY || window.pageYOffset;
+        var height = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = height > 0 ? (top / height) * 100 : 0;
+        progress.style.width = Math.max(0, Math.min(100, pct)) + "%";
+        backTop.classList.toggle("show", top > 420);
+      }
+
+      function setActive(id) {
+        tocLinks.forEach(function (a) {
+          var active = a.getAttribute("href") === "#" + id;
+          a.classList.toggle("active", active);
+        });
+      }
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                setActive(entry.target.id);
+              }
+            });
+          },
+          {
+            rootMargin: "-42% 0px -50% 0px",
+            threshold: 0.01
+          }
+        );
+        sections.forEach(function (s) { observer.observe(s); });
+      }
+
+      backTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      window.addEventListener("resize", updateProgress);
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
