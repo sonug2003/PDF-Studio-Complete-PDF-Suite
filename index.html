@@ -531,8 +531,8 @@
         <section aria-label="Summary cards">
           <div class="summary-grid">
             <article class="summary-card">
-              <h3>No app account system</h3>
-              <p>No sign-up, login, or user account creation flow is present in the audited source code.</p>
+              <h3>Google sign-in available</h3>
+              <p>Users can create an account with “Continue with Google” and delete it from the in-app Settings section.</p>
             </article>
             <article class="summary-card">
               <h3>No analytics or ads SDKs</h3>
@@ -617,7 +617,7 @@
             The audited code does not include logic for collecting or transmitting the following categories as part of an app backend service:
           </p>
           <ul>
-            <li>No user account registration, login, or profile backend.</li>
+            <li>No developer-hosted user profile backend; account creation uses “Continue with Google”.</li>
             <li>No payment, subscription, or in-app billing integration.</li>
             <li>No analytics SDK integration detected in source usage.</li>
             <li>No ad SDK integration detected in source usage.</li>
@@ -842,18 +842,26 @@
         <section id="deletion">
           <h2>Account Deletion and Data Deletion</h2>
           <p>
-            Account deletion is not applicable to the audited app code because no in-app account creation or sign-in system was found.
+            Users can create an account in the Android app using the “Continue with Google” sign-in option.
           </p>
           <p>
-            Data deletion is device-based in this app architecture:
+            Users can delete their account and associated personal data directly from the Settings section within the app.
+          </p>
+          <p>
+            If the account deletion option is unavailable or you are unable to delete your account through the app,
+            contact our support team at <a href="mailto:himanshu0rjn@pyrbit.com">himanshu0rjn@pyrbit.com</a> to request account deletion.
+          </p>
+          <p>
+            Upon receiving a deletion request, we will process the deletion of the account and associated personal data
+            in accordance with our applicable data retention and legal obligations.
+          </p>
+          <p>
+            For locally stored files, data deletion is device-based:
           </p>
           <ul>
             <li>Delete exported files from Downloads/PDFStudio or wherever you saved them.</li>
             <li>Delete files from app storage by clearing app data or uninstalling the app.</li>
           </ul>
-          <div class="callout ok">
-            Google Play account-deletion web-link requirements apply when an app supports account creation. No such flow was found in this audited codebase.
-          </div>
         </section>
 
         <section id="play">
@@ -886,7 +894,7 @@
           <p>For privacy questions or requests, contact:</p>
           <ul>
             <li>Developer/Company: Himanshu Ranjan and Alok Ranjan</li>
-            <li>Email: pyrbit0supp@gmail.com</li>
+            <li>Email: <a href="mailto:himanshu0rjn@pyrbit.com">himanshu0rjn@pyrbit.com</a></li>
             <li>Postal Address: India</li>
             <li>Support URL (optional): https://pyrbit.com</li>
           </ul>
